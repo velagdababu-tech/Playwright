@@ -1,0 +1,24 @@
+{
+  "name": "playwright-framework",
+  "version": "1.0.0",
+  "description": "Playwright testing framework with Allure Reports",
+  "scripts": {
+    "test": "playwright test",
+    "test:debug": "playwright test --debug",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:chrome": "playwright test test1.spec.js --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "test:all": "playwright test",
+    "codegen": "playwright codegen",
+    "report": "playwright show-report",
+    "allure:report": "allure generate allure-results -o allure-report --clean",
+    "allure:open": "allure open allure-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.45.0",
+    "allure-commandline": "^2.42.1",   
+    "allure-playwright": "^2.15.1"
+  }
+}

@@ -1,0 +1,19 @@
+const { test, expect } = require('@playwright/test');
+
+test.describe('Example Tests', () => {
+  test('should have correct title', async ({ page }) => {
+    await page.goto('https://playwright.dev');
+    await expect(page).toHaveTitle(/Playwright/);
+  });
+
+  test('should contain get started link', async ({ page }) => {
+    await page.goto('https://playwright.dev');
+    await expect(page.locator('text=Get started')).toBeVisible();
+  });
+
+  test('should navigate to intro', async ({ page }) => {
+    await page.goto('https://playwright.dev');
+    await page.click('text=Get started');
+    await expect(page).toHaveURL(/.*intro/);
+  });
+});

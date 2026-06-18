@@ -1,0 +1,25 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/.playwright": true,
+    "**/test-results": true,
+    "**/playwright-report": true,
+    "**/allure-results": true,
+    "**/allure-report": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/test-results": true,
+    "**/playwright-report": true,
+    "**/allure-results": true,
+    "**/allure-report": true
+  }
+}

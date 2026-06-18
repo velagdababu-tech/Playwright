@@ -1,0 +1,91 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run All Tests",
+      "type": "shell",
+      "command": "npm",
+      "args": ["test"],
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "problemMatcher": ["$eslint-stylish"],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "Run Tests (Headed)",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "test:headed"],
+      "group": "test",
+      "problemMatcher": ["$eslint-stylish"]
+    },
+    {
+      "label": "Run Tests (Debug Mode)",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "test:debug"],
+      "group": "test",
+      "problemMatcher": ["$eslint-stylish"]
+    },
+    {
+      "label": "Run Tests (UI Mode)",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "test:ui"],
+      "group": "test",
+      "problemMatcher": ["$eslint-stylish"]
+    },
+    {
+      "label": "Install Dependencies",
+      "type": "shell",
+      "command": "npm",
+      "args": ["install"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Install Browsers",
+      "type": "shell",
+      "command": "npx",
+      "args": ["playwright", "install"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Show Test Report",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "report"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Generate Test Code",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "codegen"],
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Generate Allure Report",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "allure:report"],
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Open Allure Report",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "allure:open"],
+      "group": "test",
+      "problemMatcher": []
+    }
+  ]
+}
